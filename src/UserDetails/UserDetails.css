@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.a1{
+    margin-bottom: 20px;
+}
+.a2{
+    margin-bottom: 20px;
+}
+h2{
+    margin-bottom: 10px;
+}

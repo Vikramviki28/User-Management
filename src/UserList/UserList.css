@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 5px;
+    
+}
+h1{
+    margin: 10px;
+}
+ul{
+    text-decoration: none;
+    font-size: 17px;
+}
