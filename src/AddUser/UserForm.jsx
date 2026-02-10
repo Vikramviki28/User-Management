@@ -51,63 +51,64 @@ const UserForm = ({ addUser }) => {
     <form onSubmit={handleSubmit} className="form-container">
 
         <div className="form-header">
-           USER  REGISTRATION  FORM
+           USER-REGISTRATION  FORM
         </div>
 
-      <input
+      <input className="inp"
         type="text"
         name="name"
         placeholder="Name"
         value={formData.name}
-        onChange={handleChange}
+        onChange={handleChange} required
       />
 
-      <input
+      <input className="inp"
         type="email"
         name="email"
         placeholder="Email"
         value={formData.email}
-        onChange={handleChange}
+        onChange={handleChange} required
       />
 
-      <input
+      <input className="inp"
         type="text"
         name="phone"
         placeholder="Phone"
         value={formData.phone}
-        onChange={handleChange}
+        onChange={handleChange} required
       />
 
-      <input
+      <input className="inp"
         type="text"
         name="website"
         placeholder="Website"
         value={formData.website}
-        onChange={handleChange}
+        onChange={handleChange} required
       />
 
-      <input
+      <input className="inp"
         type="text"
         name="street"
         placeholder="Street"
         value={formData.street}
-        onChange={handleChange}
+        onChange={handleChange} required
       />
 
-      <input
+      <input className="inp"
         type="text"
         name="city"
         placeholder="City"
         value={formData.city}
-        onChange={handleChange}
+        onChange={handleChange} required
       />
 
-      <input
+      <input className="inp"
         type="text"
         name="zipcode"
         placeholder="Zipcode"
         value={formData.zipcode}
         onChange={handleChange}
+        required
       />
 
       <button type="submit" className="btn">Add User</button>
