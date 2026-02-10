@@ -1,55 +1,29 @@
-import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
-import "../UserList/UserList.css"
+import "./UserList.css";
 
-const UserList = () => {
-  const [users,setUsers] = useState([])
-  const [loading,setLoading] = useState(true)
-  const [error,setError] = useState(null)
+const UserList = ({ users }) => {
+  if (!users || users.length === 0) {
+    return <h3>No users found</h3>;
+  }
 
-  useEffect(()=>{
-     setLoading(true)
-     const fetchUsers = async () =>{
-      try{
-      const response = await fetch("https://jsonplaceholder.typicode.com/users")
-      if (!response.ok) {
-          throw new Error("User not found");
-        }
-      const data = await response.json();
-      setUsers(data)
-      setLoading(true)
-      }
-      catch(error){
-        setError(error.message)
-      }
-      finally{
-        setLoading(false)
-      }
-     }
-     fetchUsers()
-  },[])
-   if(loading)
-    return <h3>Loading Please Wait</h3>
-   if(error)
-     return <h3>{error}</h3>
   return (
-    <>
-    <div>
-    <h1>User List</h1>
-    <ul>
+    <div className="user-list-container">
+  <h2>Users List</h2>
+
+  <Link to="/add-user" className="add-user-link">
+    Add New User
+  </Link>
+
+  <ul className="user-list">
     {users.map((user) => (
-       <li key={user.id}>
-      <Link to={`/users/${user.id}`}>
-      {user.name}
-    </Link>
-  </li>
-))}
+      <li key={user.id}>
+        <Link to={`/users/${user.id}`}>{user.name}</Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
-    </ul>
-    </div>
-    </>
-  )
-}
+  );
+};
 
-export default UserList
-
+export default UserList;
