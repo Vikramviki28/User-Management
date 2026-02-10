@@ -14,7 +14,11 @@ const UserDetails = ({ users }) => {
 
   return (
     <>
-    <div className="user-details">
+    <div className="user-details-container">
+      <div className="details-header">
+      <h2>USER DETAILS</h2>
+      </div>
+      <div className="details-blog">
       <div className="a1">
         <h2>{user.name}</h2>
         <p>Username: {user.username}</p>
@@ -28,10 +32,12 @@ const UserDetails = ({ users }) => {
           {user.address.city} - {user.address.zipcode}
         </p>
       </div>
-
-      <h4>Contact</h4>
-      <p>Phone: {user.phone}</p>
-      <p>Website: {user.website}</p>
+      <div className="a3">
+         <h4>Contact</h4>
+            <p>Phone: {user.phone}</p>
+            <p>Website: {user.website}</p>
+       </div>
+      </div>
       </div>
     </>
   );
