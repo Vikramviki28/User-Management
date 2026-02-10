@@ -30,6 +30,7 @@ const UserForm = ({ addUser }) => {
     const newUser = {
       id: Date.now(), 
       name: formData.name,
+      username: formData.name.toLowerCase().replace(/\s+/g, ""),
       email: formData.email,
       phone: formData.phone,
       website: formData.website,
@@ -41,7 +42,7 @@ const UserForm = ({ addUser }) => {
     };
     //  console.log("NEW USER:", newUser);
     addUser(newUser);
-    navigate(`/users/${newUser.id}`);
+    navigate("/");
 
    
   };
@@ -59,6 +60,14 @@ const UserForm = ({ addUser }) => {
         name="name"
         placeholder="Name"
         value={formData.name}
+        onChange={handleChange} required
+      />
+
+      <input className="inp"
+        type="text"
+        name="name"
+        placeholder="Username"
+        value={formData.username}
         onChange={handleChange} required
       />
 

@@ -1,7 +1,9 @@
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "../UserDetails/UserDetails.css";
 
+
 const UserDetails = ({ users }) => {
+  const navigate = useNavigate()
   const { id } = useParams();
 
   const user = users.find(
@@ -14,6 +16,10 @@ const UserDetails = ({ users }) => {
 
   return (
     <>
+      <div style={{display:"flex",justifyContent:"end", marginRight:"20px",marginTop:"30px"}}>
+        <button onClick={()=>navigate("/")} style={{fontSize:"18px",backgroundColor:"#2563eb",
+           color:"whitesmoke",border:"none",padding:"5px",borderRadius:"8px"}}>Home</button>
+      </div>
     <div className="user-details-container">
       <div className="details-header">
       <h2>USER DETAILS</h2>
