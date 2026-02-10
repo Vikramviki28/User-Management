@@ -20,7 +20,7 @@
 }
 
 .add-user-link:hover {
-  background-color: #1e4fd6;
+  background-color: #068511;
 }
 
 .user-list {
@@ -33,5 +33,5 @@
 }
 
 .user-list li:hover {
-  background-color: #f1f5f9;
+  background-color: #b1c9e0;
 }

@@ -8,7 +8,7 @@ const UserList = ({ users }) => {
 
   return (
     <div className="user-list-container">
-  <h2>Users List</h2>
+  <h2>USER LIST</h2>
 
   <Link to="/add-user" className="add-user-link">
     Add New User

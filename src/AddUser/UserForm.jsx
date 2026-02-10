@@ -47,7 +47,12 @@ const UserForm = ({ addUser }) => {
   };
 
   return (
+    <div className="main">
     <form onSubmit={handleSubmit} className="form-container">
+
+        <div className="form-header">
+           USER  REGISTRATION  FORM
+        </div>
 
       <input
         type="text"
@@ -105,8 +110,10 @@ const UserForm = ({ addUser }) => {
         onChange={handleChange}
       />
 
-      <button type="submit">Add User</button>
+      <button type="submit" className="btn">Add User</button>
+      
     </form>
+    </div>
   );
 };
 

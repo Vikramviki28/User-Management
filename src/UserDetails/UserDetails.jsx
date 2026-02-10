@@ -21,7 +21,7 @@ const UserDetails = ({ users }) => {
       <div className="details-blog">
       <div className="a1">
         <h2>{user.name}</h2>
-        <p>Username: {user.username}</p>
+        {/* <p>Username: {user.username}</p> */}
         <p>Email: {user.email}</p>
       </div>
 
